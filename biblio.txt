@@ -1,0 +1,38 @@
+create database new_biblio;
+
+
+CREATE TABLE Ouvrage( 
+ id_ouvrage INT  PRIMARY KEY AUTO_INCREMENT, 
+num INT ,
+categorie VARCHAR(50), 
+titre VARCHAR(50), 
+nb_exemplaires INT, 
+resume VARCHAR(50), 
+auteur VARCHAR(50)
+);
+
+INSERT INTO Ouvrage (num, categorie, titre, nb_exemplaires, resume, auteur) 
+VALUES (789, "roman", "1984", 3, "lorem spacz ldkjffja","Georges Orwell" ),
+(156, "roman", "Germinal", 2, "lorem sapec jfdhsfusdhf", Emile Zola"),
+(589, "jeunesse","Un très beau jour", 1, "Voici un album pour acceuillir un enfant", "Marie-France Painset et Judith Gueyfier");
+
+
+
+
+
+CREATE TABLE Abonne(
+   idAbonne INT PRIMARY KEY AUTO_INCREMENT,
+   nom VARCHAR(50),
+   prenom VARCHAR(50),
+   mail VARCHAR(50),
+   password VARCHAR(15),
+   dateAbonnement DATE,
+   num INT,
+   UNIQUE(mail) 
+);
+
+INSERT INTO personne (nom, prenom) VALUES ("Wick", "John"), ("Dalton", "Jack");
+
+
+
+
